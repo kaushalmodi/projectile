@@ -1038,7 +1038,7 @@ will return DIR or the current directory, otherwise it'd raise an error."
                        projectile-project-root-files-functions)))
                   ;; set cached to none so is non-nil so we don't try
                   ;; and look it up again
-                  'none))))
+                  (projectile-ensure-project dir)))))
 
 (defun projectile-ensure-project (dir)
   "Ensure that DIR is non-nil.
